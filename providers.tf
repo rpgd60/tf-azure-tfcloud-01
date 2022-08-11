@@ -1,10 +1,10 @@
 # Terraform Block
 terraform {
-  required_version = ">= 1.0.0"
+  required_version = ">= 1.2.0"
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = ">= 2.0" 
+      version = ">= 3.0" 
     }
     random = {
       source = "hashicorp/random"
@@ -17,13 +17,3 @@ terraform {
 provider "azurerm" {
  features {}          
 }
-
-# Random String Resource
-resource "random_string" "myrandom" {
-  length = 6
-  upper = false 
-  special = false
-  number = false   
-}
-
-
